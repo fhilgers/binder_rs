@@ -15,6 +15,8 @@ version = "1.0.0"
 edition = "2021"
 rust-version = "1.67"
 
+[workspace]
+
 [lib]
 crate-type = ["cdylib"]
 "#;
@@ -95,7 +97,7 @@ fn main() {
         .allowlist_function(".*")
         // Tell cargo to invalidate the built crate whenever any of the
         // included header files changed.
-        .parse_callbacks(Box::new(bindgen::CargoCallbacks))
+        .parse_callbacks(Box::new(bindgen::CargoCallbacks::new()))
         // Finish the builder and generate the bindings.
         .generate()
         // Unwrap the Result and panic on failure.
