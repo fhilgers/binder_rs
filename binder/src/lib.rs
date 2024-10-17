@@ -94,7 +94,7 @@
 //! ```
 
 #[macro_use]
-mod binder;
+pub mod binder;
 mod binder_async;
 mod error;
 mod native;
