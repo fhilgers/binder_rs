@@ -23,6 +23,9 @@
 #include <android/binder_shell.h>
 #include <android/binder_stability.h>
 #include <android/binder_status.h>
+#include <android/binder_ibinder_jni.h>
+#include <android/binder_parcel_jni.h>
+
 
 namespace android {
 

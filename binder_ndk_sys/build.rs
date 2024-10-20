@@ -78,6 +78,7 @@ fn main() {
         // The input header we would like to generate
         // bindings for.
         .header("src/BinderBindings.hpp")
+        .clang_arg("-Isrc/include")
         .clang_arg("-Isrc/include_cpp")
         .clang_arg("-Isrc/include_ndk")
         .clang_arg("-Isrc/include_platform")
